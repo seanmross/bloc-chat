@@ -8,7 +8,9 @@
       });
     $stateProvider
       .state('home', {
-        url: '/'
+        url: '/',
+        controller: 'HomeCtrl as home',
+        templateUrl: 'templates/home.html'
       });
   }
 
