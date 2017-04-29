@@ -6,14 +6,20 @@
   <title>Bloc Chat</title>
   <link rel="stylesheet" href="/styles/home.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 </head>
 
 <body>
 
   <ui-view></ui-view>
 
-  <!-- Firebase -->
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
+
   <script>
   var config = {
     apiKey: "AIzaSyC5CzTEnsLo18Cft38Y-KJ-C7z0v7lBq00",
@@ -25,16 +31,12 @@
   };
   firebase.initializeApp(config);
   </script>
-  <!-- Angular -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-  <!-- ui.router -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-  <!-- Angular Fire -->
-  <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
-
+  <script src="/scripts/ui-bootstrap-tpls-2.5.0.min.js"></script>
   <script src="/scripts/app.js"></script>
   <script src="/scripts/controllers/HomeCtrl.js"></script>
+  <script src="/scripts/controllers/ModalCtrl.js"></script>
   <script src="/scripts/services/Room.js"></script>
+
 </body>
 
 </html>
