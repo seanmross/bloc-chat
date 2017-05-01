@@ -1,23 +1,22 @@
-<div class="container">
-<section class="header">
-    <h1 class="title">BlocChat</h1>
-    <h4 class="tagline">The qickest way to connect with friends on the web.</h4>
-</section>
 
-<section class="sidebar col-md-3">
-    <div class="title">Chat Rooms</div>
+
+  <section class="navbar">
+    <div class="header">
+      <div class="title">chatterbox</div>
+      <img src="/assets/images/bloc-logo-square.png" alt="bloc logo">
+      <div class="tagline">for those who just like to chat.</div>
+    </div>
+
+    <div class="list-title">chat rooms</div>
+
     <div class="chat-room-button">
-      <button class="btn btn-primary" ng-click="home.open()">New room</button>
+      <button class="btn btn-warning" ng-click="home.open()">+ new room</button>
     </div>
 
     <div class="chat-room-list">
       <div class="chat-room-item" ng-repeat="room in home.getRooms">{{ room.$value }}</div>
     </div>
+  </section>
 
+<section class="chat-room-window">
 </section>
-
-<section class="chat-room-window col-md-8">
-  <div ng-repeat="room in home.getRooms">{{ room.$id }}</div>
-</section>
-
-</div>
