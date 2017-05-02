@@ -5,13 +5,11 @@ img {
 }
 
 .navbar {
-  width: 33%;
-  min-width: 320px;
   height: 100vh;
   background-color: steelblue;
   padding: 15px;
   color: white;
-  display: inline-block;
+  border-radius: 0px;
 }
 
 .navbar .header {
@@ -41,17 +39,38 @@ img {
 .chat-room-item {
   margin-top: 5px;
   margin-bottom: 5px;
+  clear: both;
+  float: left;
+  display: inline-block;
  }
 
-.chat-room-window {
-   background-color: lightgray;
-   height: 100vh;
-   width: 67%;
+.chat-room-item:hover {
+  cursor: pointer;
+}
+
+ .chat-room-button {
    display: inline-block;
    float: right;
  }
 
-.chat-room-button {
-  display: inline-block;
-  float: right;
+.chat-window {
+   background-color: lightgray;
+   height: 100vh;
+ }
+
+.chat-window-title {
+  padding: 15px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+}
+
+.chat-window-body {
+  padding: 15px;
+  color: white;
+}
+
+.col-sm-4, .col-sm-8 {
+  padding: 0;
 }

@@ -8,11 +8,10 @@
       addRoom: function(roomName){  //method to add new chat room
         rooms.$add(roomName);
       }
-    }
+    };
   }
 
   angular
     .module('blocChat')
     .factory('Room', ['$firebaseArray', Room]);
-
-})()
+})();

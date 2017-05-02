@@ -1,5 +1,6 @@
-
-
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4">
   <section class="navbar">
     <div class="header">
       <div class="title">chatterbox</div>
@@ -14,9 +15,19 @@
     </div>
 
     <div class="chat-room-list">
-      <div class="chat-room-item" ng-repeat="room in home.getRooms">{{ room.$value }}</div>
+      <div class="chat-room-item" ng-repeat="room in home.getRooms" ng-click="home.setActiveRoom(room)">{{ room.$value }}</div>
     </div>
   </section>
+</div>
 
-<section class="chat-room-window">
-</section>
+<div class="col-sm-8">
+  <section class="chat-window">
+    <div ng-show="activeRoom">
+      <div class="chat-window-title">{{ activeRoom }}</div>
+      <div class="chat-window-body">{{ activeMessages }}</div>
+    </div>
+  </section>
+  
+</div>
+</div>
+</div>
