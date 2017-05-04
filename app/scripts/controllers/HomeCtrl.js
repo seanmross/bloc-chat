@@ -8,7 +8,7 @@
     //function to open modal instance
     this.open = function() {
       var modalInstance = $uibModal.open({
-        templateUrl: '/templates/modal.html',
+        templateUrl: '/templates/create-room-modal.html',
         controller: 'ModalCtrl',
         controllerAs: 'modal',
         size: 'md'
