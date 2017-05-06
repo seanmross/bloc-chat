@@ -18,7 +18,7 @@
   function BlocChatCookies($cookies, $uibModal) {
     var currentUser = $cookies.get('blocChatCurrentUser');  //$cookies.get method sets value of 'blocChatCurrentUser' cookie equal to currentUser
 
-    if (!currentUser || currentUser === '') { //if there is no currentUser, create modal instance
+    if (currentUser === null) { //if there is no currentUser, create modal instance
       var modalInstance = $uibModal.open({
         // Modal configuration object properties
         templateUrl: '/templates/create-username-modal.html',
@@ -37,7 +37,6 @@
 
       modalInstance.result.then(function(un) {
           $cookies.put('blocChatCurrentUser', un);
-          currentUser = un;
       });
     }
   }
