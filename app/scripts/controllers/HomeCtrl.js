@@ -18,17 +18,21 @@
         function(userInput) {
           Room.addRoom(userInput);
         });
-
     };
 
     //method to set active room
     this.setActiveRoom = function(room){
-      //set active room object equal to room's $value property
-      $scope.activeRoom = room.$value;
+      //set activeRoom object equal to room that is clicked on, accessible to home controller scope
+      $scope.activeRoom = room;
       //use Message service to set getMessages object equal to room's $id property
       $scope.activeMessages = Message.getByRoomId(room.$id);
-    }
+    };
 
+    //use Message service to send new message in active room
+    this.sendMessage = function(){
+      Message.send($scope.newMessage, $scope.activeRoom.$id);
+      $scope.newMessage = null;
+    }
   }
 
   angular
