@@ -28,7 +28,11 @@
           <div class="chat-window-header">{{ activeRoom.$value }}</div>
           <div class="chat-window-body">
             <div class="message">
-              <div ng-repeat="message in activeMessages"> {{ message.content }} </div>
+              <div ng-repeat="message in activeMessages">
+                <div class="username">{{ message.username }}</div>
+                <div class="time">({{ message.sentAt }}): </div>
+                <div class="content">{{ message.content }}</div>
+              </div>
             </div>
           </div>
 

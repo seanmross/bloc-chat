@@ -84,6 +84,14 @@ img {
   padding: 15px;
 }
 
+.username {
+  font-weight: bold;
+  display: inline-block;
+}
+.content, .time {
+  display: inline-block;
+}
+
 .form-group {
   padding-left: 15px;
 }
