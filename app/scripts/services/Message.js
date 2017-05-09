@@ -12,6 +12,9 @@
         hours -= 12;
         period = 'pm';
       }
+      if (minutes < 10) {
+        minutes = '0' + minutes;
+      }
       var time = hours + ":" + minutes + period;
       return time;
     }
