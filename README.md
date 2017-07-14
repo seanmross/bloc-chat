@@ -1,7 +1,7 @@
 # Chatterbox
 
 ### Objectives
-Bloc Chat was developed to create an efficient online messaging platform. It was designed using AngularJS and Google’s Firebase database platform. It was designed based on the following use cases:
+Chatterbox was developed to create an efficient online messaging platform. It was designed using AngularJS and Google’s Firebase database platform. It was designed based on the following use cases:
       As a user, I want to:
 * see a list of available chat rooms
 * create chat rooms
