@@ -1,39 +1,27 @@
+# Chatterbox
+
+### Objectives
+Bloc Chat was developed to create an efficient online messaging platform. It was designed using AngularJS and Google’s Firebase database platform. It was designed based on the following use cases:
+      As a user, I want to:
+* see a list of available chat rooms
+* create chat rooms
+* see a list of messages in each chat room
+* set my username to display in chat rooms
+* send messages associated with my username in a chat room
+
+### Technologies Used
+Relevant technology utilized in creating this app include: Angular & Firebase. Angular’s front-end framework was chosen because it is a great option for building single page applications and because of it’s two-way data binding. This two-way data binding allows for automatic synchronization of data, revealing user-based changes to model data in real time through the view. Firebase was chosen because it is a great back-end foundation for a scalable network application and provides an API to easily store and sync data in a database.
+
+### Implementation Highlights
+* Injected a Firebase service into an Angular controller
+* Used Firebase JavaScript and AngularFire APIs
+* Queried a Firebase array
+* Used UI Bootstrap Modal plugin
+* Used cookies to store user’s information in the web browser
+
 ## Bloc Frontend Project Starter
 
-A starter application for student projects in Bloc's [Frontend Web Development Course](https://www.bloc.io/frontend-development-bootcamp).
-
-## Pull Down the Code
-
-Start by cloning the repository:
-
-```
-$ git clone https://github.com/Bloc/bloc-frontend-project-starter.git <your-frontend-project-name>
-```
-
-## Reset Git
-
-This will be your personal project. So all of the past commit history that we used to build this starter app aren't needed. Also you will want to be able to push/pull code from your personal remote (Github) repository and NOT Bloc's remote (Github) repository.
-
-Remove the existing local Git repository:
-
-```
-$ rm -r -f .git
-```
-
-Initialize a new Git repository, add all of these existing files, and commit them:
-
-```
-$ git init
-$ git add .
-$ git commit -m "initial commit"
-```
-
-Go to Github and create a new repository. Add that new repository as the proper remote. Then push your initial commit.
-
-```
-$ git remote add origin <URL TO NEW GITHUB REPO>
-$ git push origin master
-```
+Chatterbox is based off Bloc-chat, a starter application for student projects in Bloc's [Frontend Web Development Course](https://www.bloc.io/frontend-development-bootcamp).
 
 ## Configuration
 
@@ -45,24 +33,10 @@ Install the project dependencies by running:
 $ npm install
 ```
 
-## Run the Application
-
 Run the application server:
-
 ```
 $ npm start
 ```
-
-The server will start up. To stop the server, press `cntrl + c`.
-
-
-## Use in Brackets Live Preview
-
-To use the application with the Live Preview functionality of the Brackets text editor, go to __File > Project Settings__ and add `http://localhost:3000` to the Base URL field.
-
-![Screenshot of project settings URL in Brackets](https://bloc-global-assets.s3.amazonaws.com/images-frontend/screenshots/bloc-frontend-project-starter/live_preview_project_settings.png)
-
-The text in the application will not update on every keystroke, but changes will automatically push when you save the file.
 
 ## Directory Structure
 
@@ -84,23 +58,6 @@ The text in the application will not update on every keystroke, but changes will
 ├── package.json
 └── server.js
 ```
-
-
-### Assets/Images
-
-Add images to the `app/assets/images` directory. To reference images in HTML, use the path `/assets/images/<image file name>.jpg`. For example, to include the image called `bloc-white-logo.png`, the path for the `src` attribute in the HTML would be:
-
-```html
-<img src="/assets/images/bloc-white-logo.png">
-```
-
-__Note:__ A sample image has been added to `app/images`. To remove the image from the application, run the following command from the root of repo:
-
-```bash
-$ rm -f app/assets/images/bloc-white-logo.png
-```
-
-To reference any other assets, like the music in Bloc Jams, use the path `assets/<asset-type>/<asset-file-name>`.
 
 ### Difference between Pages and Templates
 

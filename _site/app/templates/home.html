@@ -1,0 +1,58 @@
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-sm-4">
+      <section class="navbar">
+        <div class="header">
+          <div class="title">chatterbox</div>
+          <img src="/assets/images/bloc-logo-square.png" alt="bloc logo">
+          <div class="tagline">for those who just like to chat.</div>
+        </div>
+
+        <div class="list-title">chat rooms</div>
+
+        <div class="chat-room-button">
+          <button class="btn btn-success" ng-click="home.open()">+ new room</button>
+        </div>
+
+        <div class="chat-room-list">
+          <div class="chat-room-item" ng-repeat="room in home.getRooms" ng-click="home.setActiveRoom(room)">{{ room.$value }}</div>
+        </div>
+      </section>
+    </div>
+
+
+    <div class="col-sm-8">
+      <section class="chat-window">
+        <div ng-show="activeRoom">
+          <div class="chat-window-header">{{ activeRoom.$value }}</div>
+          <div class="chat-window-body">
+            <div class="message">
+              <div ng-repeat="message in activeMessages">
+                <div class="username">{{ message.username }}</div>
+                <div class="time">({{ message.sentAt }}): </div>
+                <div class="content">{{ message.content }}</div>
+              </div>
+            </div>
+          </div>
+
+          <form class="form-horizontal">
+            <div class="form-group">
+              <div class="col-sm-11">
+                <input type="text" class="form-control" placeholder="New message" ng-model="newMessage">
+              </div>
+              <div class="col-sm-1">
+                <button type="submit" class="btn btn-success" ng-click="home.sendMessage()"> send </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </section>
+    </div>
+
+
+
+
+</div>
+</div>
